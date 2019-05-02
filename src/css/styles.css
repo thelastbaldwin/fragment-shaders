@@ -1,3 +1,59 @@
-body {
-    background-color: gray;
+* {
+  box-sizing: border-box;
 }
+
+body {
+    background-color: #e3e3e3;
+}
+
+section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+section > * {
+  margin: 0 10px;
+}
+
+pre {
+  margin-top: 0 !important;
+  height: 500px;
+  overflow: scroll;
+  flex:  2;
+}
+
+canvas {
+  flex: 1;
+}
+
+ul {
+  justify-self: flex-end;
+  flex: 1;
+  height: 500px;
+  overflow: scroll;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+li {
+  line-height: 1.8;
+}
+
+@media screen and (max-width: 800px){
+  section {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  pre {
+    max-width: 100%;
+    overflow: scroll;
+  }
+
+  section > * {
+    margin: 0 0 10px 0;
+  }
+}
+
+

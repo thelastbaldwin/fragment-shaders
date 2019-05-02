@@ -1,10 +1,6 @@
-# Webpack starter
+# Fragment Shaders
 
-Features:
-
-* Development and Production Builds
-* EsLint on save
-* Auto reloading dev server through webpack-dev-server
+  A few of my own shaders but mostly ripped off from [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo)
 
 ## Running the dev server:
 
@@ -13,3 +9,5 @@ Features:
 ## Running the production build:
 
 * Run `npm run build` from the terminal. Built assets will appear in the dist folder.
+
+

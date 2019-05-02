@@ -2,7 +2,7 @@
 precision mediump float;
 #endif
 
-niform vec2 u_resolution;
+uniform vec2 u_resolution;
 
 float stroke(float x, float s, float w){
 	float d = step(s, x + w * .5) - step(s, x - w * .5);

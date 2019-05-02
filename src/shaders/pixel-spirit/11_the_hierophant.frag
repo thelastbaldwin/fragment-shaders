@@ -1,7 +1,8 @@
-uniform vec2 u_resolution;
 #ifdef GL_ES
 precision mediump float;
 #endif
+
+uniform vec2 u_resolution;
 
 float stroke(float x, float s, float w){
 	float d = step(s, x + w * .5) - step(s, x - w * .5);

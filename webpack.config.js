@@ -7,13 +7,13 @@ const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-// copies the index.html to dist and adds the appropriate link and script tags
+// copies the index.html to docs and adds the appropriate link and script tags
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "index.html",
   filename: "index.html"
 });
 
-const cleanWebpackPlugin = new CleanWebpackPlugin(["dist"])
+const cleanWebpackPlugin = new CleanWebpackPlugin(["docs"])
 
 const commonConfig = merge([
   {
@@ -25,7 +25,7 @@ const commonConfig = merge([
     },
     context: path.resolve("src/"),
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, "docs"),
       filename: "[name].[contenthash].js"
     },
     plugins: [

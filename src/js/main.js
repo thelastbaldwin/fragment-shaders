@@ -1,7 +1,6 @@
 import Prism from "prismjs";
-
-import "../css/styles.css";
 import GlslCanvas from "glslCanvas";
+import "../css/styles.css";
 
 const canvas = document.querySelector(".glslCanvas");
 const code = document.querySelector("code");
@@ -17,11 +16,13 @@ list.addEventListener("click", (e) => {
     }
   } = e;
 
-  fetch(pathname)
-    .then(response => response.text())
-    .then((text) => {
-      code.textContent = text;
-      Prism.highlightAll();
-      sandbox.load(text);
-    });
+  if (pathname) {
+    fetch(pathname)
+      .then(response => response.text())
+      .then((text) => {
+        code.textContent = text;
+        Prism.highlightAll();
+        sandbox.load(text);
+      });
+  }
 });
